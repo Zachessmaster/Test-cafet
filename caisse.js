@@ -32,7 +32,7 @@ function toast(msg) {
   el.textContent = msg;
   el.className = "toast show";
   clearTimeout(el._t);
-  el._t = setTimeout(() => el.className = "toast", 2400);
+  el._t = setTimeout(() => el.className = "toast", 4000);
 }
 
 // ---- STORAGE ----
