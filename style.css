@@ -336,14 +336,15 @@ body {
 /* ---- TOAST ---- */
 .toast {
   position: fixed;
-  bottom: 24px;
+  top: 24px;
+  bottom: auto;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: #1e2a1e;  /* fond légèrement vert foncé */
+  border: 1px solid var(--accent-green);
   border-radius: var(--radius-sm);
-  padding: 9px 18px;
-  font-size: 13px;
+  padding: 14px px;
+  font-size: 15px;
   color: var(--text-primary);
   opacity: 0;
   transition: opacity 0.2s;
