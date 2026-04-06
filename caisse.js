@@ -145,6 +145,8 @@ function reset() {
   if (prompt("Code de réinitialisation :") !== "1234") return;
   total = 0; historique = []; ventes = {};
   caisseInitiale = 0; caisseReelle = 0;
+  document.getElementbyId("input-debut").value = ""; // réinitialiser données
+  document.getElementbyId("input-fin").value = ""; //pareil ici le but étant de partir complètement à zéro
   produits.forEach(p => ventes[p.nom] = 0);
   localStorage.removeItem(CLES_STORAGE);
   afficher();
