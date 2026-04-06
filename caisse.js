@@ -156,18 +156,20 @@ document.getElementById("input-debut").addEventListener("change", (e) => {
   const n = parseFloat(e.target.value);
   if (isNaN(n) || n < 0) { toast("Montant invalide"); return; }
   caisseInitiale = Math.round(n * 100);
+  e.target.blur(); // ← enlève le curseur clignotant
   sauvegarder();
   afficher();
-  toast("Caisse de départ : " + formatter(caisseInitiale));
+  toast("✅ C'est parti ! Tu peux commencer les ventes.");
 });
 
 document.getElementById("input-fin").addEventListener("change", (e) => {
   const n = parseFloat(e.target.value);
   if (isNaN(n) || n < 0) { toast("Montant invalide"); return; }
   caisseReelle = Math.round(n * 100);
+  e.target.blur(); // ← enlève le curseur clignotant
   sauvegarder();
   afficher();
-  toast("Caisse réelle enregistrée");
+  toast("✅ Caisse de fin enregistrée, consulte le bilan ci-dessous.");
 });
 
 function exporter() {
