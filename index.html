@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caisse Cafet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="root">
+
+    <header class="header">
+      <div>
+        <div class="label">Total en cours</div>
+        <div class="total-value" id="total-display">0,00 €</div>
+        <div class="progress-wrap">
+          <div class="progress-bar" id="prog-bar"></div>
+        </div>
+        <div class="progress-label" id="prog-label">Objectif : 0,00 € / 50,00 €</div>
+      </div>
+      <div class="header-right">
+        <div class="label">Ventes</div>
+        <div class="nb-ventes" id="nb-ventes">0</div>
+      </div>
+    </header>
+
+    <div class="grid" id="buttons"></div>
+
+    <div class="caisse-inputs">
+      <div class="caisse-champ">
+        <label for="input-debut">💰 Caisse de départ (€)</label>
+        <input type="number" id="input-debut" inputmode="decimal" min="0" step="0.01" placeholder="0.00">
+      </div>
+      <div class="caisse-champ">
+        <label for="input-fin">🏁 Caisse de fin (€)</label>
+        <input type="number" id="input-fin" inputmode="decimal" min="0" step="0.01" placeholder="0.00">
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn-undo" id="btn-undo" onclick="annuler()">↩ Annuler</button>
+      <button class="btn-export" onclick="exporter()">↓ Export</button>
+      <button class="btn-reset" onclick="reset()">✕ Reset</button>
+    </div>
+
+    <div class="journal-box">
+      <div class="section-title">Dernières ventes</div>
+      <div id="journal-list"><div class="vide">Aucune vente pour l'instant</div></div>
+    </div>
+
+    <div class="ecart-box" id="ecart-box" style="display:none">
+      <div class="section-title">Bilan de caisse</div>
+      <div id="ecart-contenu"></div>
+    </div>
+
+    <div class="stats-grid" id="stats"></div>
+
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="caisse.js"></script>
+</body>
+</html>
