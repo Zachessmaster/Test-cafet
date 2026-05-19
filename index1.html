@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Cafet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="root">
+
+    <header class="header">
+      <div>
+        <div class="label">Gestion du stock</div>
+        <div class="total-value" id="date-affichage" style="font-size:18px"></div>
+      </div>
+      <div class="header-right">
+        <button class="btn-retour" onclick="window.location.href='index.html'">← Caisse</button>
+      </div>
+    </header>
+
+    <div class="stock-intro">
+      Saisis les quantités de départ en début de semaine. Le stock attendu se met à jour automatiquement à chaque vente.
+    </div>
+
+    <div class="section-title" style="margin-bottom:8px">📦 Stock de la semaine</div>
+    <div id="stock-liste"></div>
+
+    <div class="actions" style="margin-top:8px">
+      <button class="btn-reset" onclick="resetStock()">✕ Reset stock</button>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="stock.js"></script>
+</body>
+</html>
