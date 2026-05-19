@@ -7,10 +7,20 @@ const OBJECTIF = 50;
 
 // ⚙️ MODIFIER ICI : vos produits
 const produits = [
-  { nom: "Coca",  emoji: "🥤", prix: 1.0 },
-  { nom: "Jus",   emoji: "🍹", prix: 1.0 },
-  { nom: "Chips", emoji: "🍟", prix: 0.5 },
-  { nom: "Twix",  emoji: "🍫", prix: 1.0 }
+  { nom: "Eau plate",     emoji: "💧", prix: 0.50 },
+  { nom: "Sirop",         emoji: "🥛", prix: 1.00 },
+  { nom: "Jus orange",    emoji: "🍊", prix: 0.50 },
+  { nom: "Jus pomme",     emoji: "🍎", prix: 0.50 },
+  { nom: "Jus multifruits",emoji:"🍹", prix: 0.50 },
+  { nom: "Caprisun",      emoji: "🧃", prix: 0.50 },
+  { nom: "Canette",       emoji: "🥤", prix: 1.00 },
+  { nom: "Barre céréales",emoji: "🌾", prix: 1.00 },
+  { nom: "Pitch",         emoji: "🍓", prix: 0.50 },
+  { nom: "Gâteau",        emoji: "🧁", prix: 0.50 },
+  { nom: "Kinder/Twix",  emoji: "🍫", prix: 1.00 },
+  { nom: "Cookie",        emoji: "🍪", prix: 1.00 },
+  { nom: "Pain choco",    emoji: "🥐", prix: 1.00 },
+  { nom: "Beignet",       emoji: "🍩", prix: 1.00 },
 ];
 
 // ---- ÉTAT ----
