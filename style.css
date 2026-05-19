@@ -354,3 +354,116 @@ body {
 }
 
 .toast.show { opacity: 1; }
+
+/* ---- STOCK ---- */
+.btn-retour {
+  background: var(--bg-btn);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-stock {
+  color: var(--accent-green) !important;
+  border-color: rgba(46, 204, 113, 0.25) !important;
+}
+.btn-stock:hover { background: rgba(46, 204, 113, 0.08) !important; }
+
+.stock-intro {
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  line-height: 1.5;
+}
+
+.stock-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+}
+
+.stock-card.stock-alerte {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.stock-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.stock-nom {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.stock-restant {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stock-barre-wrap {
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  height: 4px;
+  margin-bottom: 6px;
+}
+
+.stock-barre {
+  height: 4px;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.stock-detail {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.stock-alerte-txt {
+  color: var(--accent-red);
+  font-weight: 500;
+}
+
+.stock-saisie {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stock-saisie label {
+  font-size: 11px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.stock-saisie input {
+  width: 70px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--bg-btn);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  padding: 5px;
+  outline: none;
+}
+
+.stock-saisie input:focus {
+  border-color: var(--accent-blue);
+}
