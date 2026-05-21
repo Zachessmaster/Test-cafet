@@ -119,7 +119,7 @@ async function chargerOuCreerSession() {
 
   } else {
     // Nouvelle session
-    const res  = await sbPost("sessions", { date: today, caisse_initiale: 0, caisse_reelle: 0, total_ventes: 0 });
+    const res = await sbPost("sessions", { date: today, periode, caisse_initiale: 0, caisse_reelle: 0, total_ventes: 0 });
     sessionId  = res[0].id;
     ventes     = {};
     produits.forEach(p => ventes[p.nom] = 0);
