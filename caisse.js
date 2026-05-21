@@ -185,7 +185,8 @@ document.getElementById("input-fin").addEventListener("change", (e) => {
 });
 
 function exporter() {
-  const date = new Date().toLocaleDateString("fr-FR");
+  const date   = new Date().toLocaleDateString("fr-FR");
+  const stock  = JSON.parse(localStorage.getItem("stock_v1") || "{}");
 
   // Détail ligne par ligne
   let lignes = ["Heure;Produit;Prix (€)"];
@@ -193,13 +194,17 @@ function exporter() {
     lignes.push(`${h.heure};${h.nom};${h.prix.toFixed(2)}`);
   });
 
-  // Résumé par produit
+  // Résumé par produit avec marges
   lignes.push("");
-  lignes.push("Produit;Quantité;Total (€)");
+  lignes.push("Produit;Qté vendue;Prix vente;Prix achat unitaire;Marge unitaire;Total ventes;Marge totale");
   produits.forEach(p => {
-    const q = ventes[p.nom] || 0;
-    const t = ((q * Math.round(p.prix * 100)) / 100).toFixed(2);
-    lignes.push(`${p.nom};${q};${t}`);
+    const q          = ventes[p.nom] || 0;
+    const totalVente = ((q * Math.round(p.prix * 100)) / 100).toFixed(2);
+    const s          = stock[p.nom] || {};
+    const prixAchat  = s.qteAchat > 0 ? (s.montant / s.qteAchat).toFixed(2) : "N/A";
+    const margeUnit  = s.qteAchat > 0 ? (p.prix - s.montant / s.qteAchat).toFixed(2) : "N/A";
+    const margeTotale= s.qteAchat > 0 ? ((p.prix - s.montant / s.qteAchat) * q).toFixed(2) : "N/A";
+    lignes.push(`${p.nom};${q};${p.prix.toFixed(2)};${prixAchat};${margeUnit};${totalVente};${margeTotale}`);
   });
 
   // Bilan de caisse
