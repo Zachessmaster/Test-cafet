@@ -543,3 +543,27 @@ body {
   margin-top: 4px;
   font-weight: 500;
 }
+
+.cafet-titre {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.cafet-nom {
+  font-size: 13px;
+  color: var(--accent-green);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.cafet-utrillo {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+  border-bottom: 3px solid var(--accent-green);
+  padding-bottom: 3px;
+  text-transform: uppercase;
+}
