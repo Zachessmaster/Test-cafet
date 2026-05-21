@@ -529,3 +529,10 @@ body {
   color: var(--accent-green);
   font-size: 11px;
 }
+
+.date-heure {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: 0.03em;
+}
