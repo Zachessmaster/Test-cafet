@@ -95,6 +95,8 @@ async function sbDelete(table, id) {
 // ---- SESSION ----
 async function chargerOuCreerSession() {
   const today = new Date().toISOString().split("T")[0];
+  const heure = new Date().getHours()
+  const periode = heure < 12 ? "matin" : "aprem";
   const data  = await sbGet("sessions", `date=eq.${today}&order=id.desc&limit=1`);
 
   if (data.length > 0) {
