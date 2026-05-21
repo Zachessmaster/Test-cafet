@@ -467,3 +467,26 @@ body {
 .stock-saisie input:focus {
   border-color: var(--accent-blue);
 }
+
+.cafet-titre {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.cafet-nom {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cafet-utrillo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--accent-green);
+  padding-bottom: 2px;
+}
