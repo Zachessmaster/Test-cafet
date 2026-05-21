@@ -130,6 +130,8 @@ async function chargerOuCreerSession() {
   if (caisseReelle   > 0) document.getElementById("input-fin").value   = (caisseReelle   / 100).toFixed(2);
 
   afficher();
+  const badgeEl = document.getElementById("session-badge");
+  if (badgeEl) badgeEl.textContent = periode === "matin" ? "🌅 Session du matin" : "🌆 Session de l'après-midi";
   toast("Session du " + new Date().toLocaleDateString("fr-FR") + " chargée");
 }
 
