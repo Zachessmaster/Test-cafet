@@ -468,25 +468,64 @@ body {
   border-color: var(--accent-blue);
 }
 
-.cafet-titre {
+/* ---- STOCK FORM ---- */
+.stock-form {
+  border-top: 1px solid var(--border);
+  margin-top: 10px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  line-height: 1;
-  margin-bottom: 8px;
+  gap: 8px;
 }
 
-.cafet-nom {
+.stock-form-ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stock-form-ligne label {
   font-size: 11px;
   color: var(--text-muted);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.cafet-utrillo {
-  font-size: 22px;
-  font-weight: 700;
+.stock-form-ligne input {
+  width: 90px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--bg-btn);
+  border: 1px solid var(--border);
   color: var(--text-primary);
-  letter-spacing: 0.05em;
-  border-bottom: 2px solid var(--accent-green);
-  padding-bottom: 2px;
+  border-radius: var(--radius-sm);
+  padding: 5px;
+  outline: none;
+}
+
+.stock-form-ligne input:focus {
+  border-color: var(--accent-blue);
+}
+
+.btn-valider-stock {
+  width: 100%;
+  padding: 9px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent-green);
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.btn-valider-stock:active {
+  transform: scale(0.97);
+}
+
+.stock-marge {
+  color: var(--accent-green);
+  font-size: 11px;
 }
