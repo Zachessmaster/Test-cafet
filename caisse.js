@@ -260,4 +260,13 @@ window.addEventListener("beforeunload", sauvegarder);
 if (caisseInitiale > 0) document.getElementById("input-debut").value = (caisseInitiale / 100).toFixed(2);
 if (caisseReelle > 0)   document.getElementById("input-fin").value   = (caisseReelle   / 100).toFixed(2);
 
+function majDateHeure() {
+  const maintenant = new Date();
+  const date = maintenant.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" });
+  const heure = maintenant.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  document.getElementById("date-heure").textContent = date + " — " + heure;
+}
+majDateHeure();
+setInterval(majDateHeure, 1000);
+
 afficher();
