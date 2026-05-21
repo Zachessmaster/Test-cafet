@@ -1,0 +1,15 @@
+{
+  "name": "Cafet Utrillo",
+  "short_name": "Cafet",
+  "start_url": "/Test-cafet/",
+  "display": "standalone",
+  "background_color": "#0d0f18",
+  "theme_color": "#2ecc71",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
